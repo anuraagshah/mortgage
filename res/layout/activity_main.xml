@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#F53737"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/RateTvS1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/PrincipalTvS1"
+        android:layout_below="@+id/PrincipalTvS1"
+        android:layout_marginTop="34dp"
+        android:text="Rate(5.5=5.5%):"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/LoanlenTvS1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/RateTvS1"
+        android:layout_below="@+id/RateTvS1"
+        android:layout_marginTop="33dp"
+        android:text="Loan Length:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/ClrBtnS1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/CalBtnS1"
+        android:layout_alignBottom="@+id/CalBtnS1"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@+id/RateTvS1"
+        android:text="Clear" />
+
+    <TextView
+        android:id="@+id/MonpayTvS1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/CalBtnS1"
+        android:layout_below="@+id/CalBtnS1"
+        android:layout_marginTop="32dp"
+        android:text="Monthly Payment:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/TotamtTvS1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/MonpayTvS1"
+        android:layout_below="@+id/MonpayTvS1"
+        android:layout_marginTop="34dp"
+        android:text="Total Amount:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/etRateS1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/RateTvS1"
+        android:layout_alignBottom="@+id/RateTvS1"
+        android:layout_toRightOf="@+id/MonpayTvS1"
+        android:ems="10"
+        android:hint="Interest"
+        android:inputType="numberDecimal|numberSigned" />
+
+    <EditText
+        android:id="@+id/etLoanS1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/LoanlenTvS1"
+        android:layout_alignLeft="@+id/etRateS1"
+        android:ems="10"
+        android:hint="Years"
+        android:inputType="numberDecimal|numberSigned" />
+
+    <TextView
+        android:id="@+id/TotalAnsS1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TotamtTvS1"
+        android:layout_alignBottom="@+id/TotamtTvS1"
+        android:layout_alignLeft="@+id/etLoanS1"
+        android:hint="$0.0"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/MonpayAnsS1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/MonpayTvS1"
+        android:layout_alignBottom="@+id/MonpayTvS1"
+        android:layout_alignLeft="@+id/ClrBtnS1"
+        android:hint="$0.0"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/etPrincipalS1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/PrincipalTvS1"
+        android:layout_alignBottom="@+id/PrincipalTvS1"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:hint="Initial loan amount"
+        android:inputType="numberDecimal|numberSigned" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/PrincipalTvS1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="42dp"
+        android:layout_toLeftOf="@+id/etPrincipalS1"
+        android:text="Principal"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/CalBtnS1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LoanlenTvS1"
+        android:layout_marginTop="34dp"
+        android:layout_toLeftOf="@+id/ClrBtnS1"
+        android:text="Calculate" />
+
+</RelativeLayout>

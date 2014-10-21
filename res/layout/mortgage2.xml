@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#7D37F5"
+    tools:context=".Mortgage2Class" >
+
+    <TextView
+        android:id="@+id/RateTvS2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/PrincipalTvS2"
+        android:layout_below="@+id/PrincipalTvS2"
+        android:layout_marginTop="26dp"
+        android:text="Rate(5.5=5.5%):"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/LoanlenTvS2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/RateTvS2"
+        android:layout_below="@+id/RateTvS2"
+        android:layout_marginTop="24dp"
+        android:text="Loan Length:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/PaymadeTvS2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/LoanlenTvS2"
+        android:layout_below="@+id/LoanlenTvS2"
+        android:layout_marginTop="28dp"
+        android:text="Payments Made:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/BackBtnS2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Back" />
+
+    <EditText
+        android:id="@+id/etPrincipalS2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/PrincipalTvS2"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:hint="Initial loan amount"
+        android:inputType="numberSigned|numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/PrincipalTvS2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="48dp"
+        android:layout_toLeftOf="@+id/etPrincipalS2"
+        android:text="Principal"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/etRateS2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/RateTvS2"
+        android:layout_alignRight="@+id/etPrincipalS2"
+        android:layout_toRightOf="@+id/PaymadeTvS2"
+        android:ems="10"
+        android:hint="Interest"
+        android:inputType="numberSigned|numberDecimal" />
+
+    <EditText
+        android:id="@+id/etLoanS2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/LoanlenTvS2"
+        android:layout_alignLeft="@+id/etRateS2"
+        android:ems="10"
+        android:hint="Years"
+        android:inputType="numberSigned|numberDecimal" />
+
+    <EditText
+        android:id="@+id/etPaymentS2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/PaymadeTvS2"
+        android:layout_alignLeft="@+id/etLoanS2"
+        android:ems="10"
+        android:hint="# of Payments"
+        android:inputType="numberSigned|numberDecimal" />
+
+    <Button
+        android:id="@+id/ClrBtnS2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etPaymentS2"
+        android:layout_marginTop="35dp"
+        android:layout_toRightOf="@+id/RemPriTvS2"
+        android:minWidth="80dip"
+        android:text="Clear" />
+
+    <Button
+        android:id="@+id/CalBtnS2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ClrBtnS2"
+        android:layout_alignBottom="@+id/ClrBtnS2"
+        android:layout_alignRight="@+id/LoanlenTvS2"
+        android:text="Calculate" />
+
+    <TextView
+        android:id="@+id/RemPriTvS2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/BackBtnS2"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="20dp"
+        android:text="Remaining Principal:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/RempriAnsS2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/RemPriTvS2"
+        android:layout_alignBottom="@+id/RemPriTvS2"
+        android:layout_alignLeft="@+id/ClrBtnS2"
+        android:hint="$0.0"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>
